@@ -1,0 +1,14 @@
+runtime: nodejs16
+
+instance_class: F2
+
+env_variables:
+  BUCKET_NAME: "ng-app-bucket-25"
+
+handlers:
+  - url: /
+    static_files: dist/angular-gcp-test/index.html
+    upload: dist/angular-gcp-test/index.html
+
+  - url: /
+    static_dir: dist/angular-gcp-test
